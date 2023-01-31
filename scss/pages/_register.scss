@@ -1,0 +1,22 @@
+.section-form {
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: white;
+    border-bottom: 0.2rem solid $color-primary;
+    margin: 1.5rem 2rem;
+    display: inline-block;
+  }
+}
+
+.form-register {
+    min-height: calc(100vh - 91px - 70px);
+}

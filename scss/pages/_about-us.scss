@@ -1,0 +1,30 @@
+.section-construction {
+  background-color: $color-tertiary;
+  min-height: calc(100vh - 91px - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.construction{
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    width: 50%;
+    display: inline-block;
+  }
+
+  &__text {font-size: 2rem;}
+  
+}
+
+@media screen and (max-width:600px){
+  .construction{
+  
+    &__text {font-size: 1rem;}
+    
+  }
+}

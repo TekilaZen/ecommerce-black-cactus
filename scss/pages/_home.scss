@@ -1,0 +1,32 @@
+.section-banner {
+    &__img {
+        width: 100%;
+    }
+}
+
+.section-cards {
+    
+    &__header {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    &__title {
+        padding: 1rem;
+        display: inline-block;
+        border-bottom: 0.2rem solid $color-primary;
+        justify-content: left;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.cards-master-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+}

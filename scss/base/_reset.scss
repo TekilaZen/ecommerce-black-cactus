@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer, header, nav, section, main{
+    display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+ol, ul, li{
+    list-style: none;
+}

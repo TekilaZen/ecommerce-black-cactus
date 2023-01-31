@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Black Cactus</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+          <a class="navbar__nav-link" href="/index.html"
+            ><img
+              class="navbar__logo"
+              src="/assets/Images/Logo.png"
+              alt="Logo de la empresa"
+          /></a>
+  
+          <div class="user-navbar">
+            <div class="user-navbar__cart-icon-container">
+              <i class="fa-solid fa-cart-shopping user-navbar__cart-icon"></i>
+            </div>
+            <div class="user-navbar__user-avatar-container">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/100px-Default_pfp.svg.png"
+                class="user-navbar__user-avatar"
+                alt="Imagen de usuario"
+              />
+            </div>
+          </div>
+  
+          <input type="checkbox" class="navbar__menu-btn" id="menu-btn" />
+  
+          <label for="menu-btn" class="navbar__menu-label">
+            <span class="navbar__menu-icon"></span>
+          </label>
+  
+          <ul class="navbar__nav-links-container">
+            <li class="navbar__nav-item">
+              <a href="/index.html" class="navbar__nav-link">Inicio</a>
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/about-us/about-us.html" class="navbar__nav-link"
+                >Sobre Nosotros</a
+              >
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/contact/contact.html" class="navbar__nav-link"
+                >Contacto</a
+              >
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/register/register.html" class="navbar__nav-link"
+                >Registro</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="main-contact">
+        <section class="section-form">
+          <div class="section-form__title">Dejanos un mensaje!</div>
+  
+          <form class="form form-contact">
+            <div class="form-container">
+              <label class="form-container__label" id="email-label" for="name"
+                >Nombre</label
+              >
+              <input
+                class="form-container__input"
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="John Doe"
+                minlength="2"
+                maxlength="70"
+              />
+            </div>
+  
+            <div class="form-container">
+              <label class="form-container__label" id="email-label" for="email"
+                >Email</label
+              >
+              <input
+                class="form-container__input"
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@email.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"
+              />
+            </div>
+            <div class="form-container">
+              <label class="form-container__label" id="msg-label" for="msg"
+                >Mensaje</label
+              >
+              <textarea name="msg" id="msg" cols="30" rows="10";" required></textarea>
+            </div>
+  
+            <div class="btn-container">
+              <button type="submit" class="btn-container__control" id="sumbmit">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="section-location">
+          <div class="section-location__title">Visitanos!</div>
+          
+          <div class="section-location__map">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2106.782042009693!2d-55.890266575340085!3d-27.37037659082672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457bfb558323321%3A0x34e028c2bfa62f8!2sEntre%20R%C3%ADos%201490%2C%20N3301JSS%20Posadas%2C%20Misiones!5e0!3m2!1sen!2sar!4v1675126059394!5m2!1sen!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </section>
+        
+      </div>
+      </main>
+
+      <footer class="footer">
+        <div class="social-media">
+          <ul class="social-media__container">
+            <li class="social-media__link-container">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="social-media__link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+  
+            <li class="social-media__link-container">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="social-media__link"
+              >
+                <i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+  
+            <li class="social-media__link-container">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                class="social-media__link"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+  
+            <li class="social-media__link-container">
+              <a
+                href="https://web.whatsapp.com"
+                target="_blank"
+                class="social-media__link"
+                ><i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p class="copyright-text">&copy 2023 Black Cactus Todos los derechos reservados   </p>
+        </div>
+      </footer>
+
+</body>
+</html>

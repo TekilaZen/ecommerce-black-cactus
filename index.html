@@ -1,12 +1,416 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
     <title>Black Cactus</title>
-</head>
-<body>
-    
-</body>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a class="navbar__nav-link" href="/index.html"
+          ><img
+            class="navbar__logo"
+            src="/assets/Images/Logo.png"
+            alt="Logo de la empresa"
+        /></a>
+
+        <div class="user-navbar">
+          <div class="user-navbar__cart-icon-container">
+            <i class="fa-solid fa-cart-shopping user-navbar__cart-icon"></i>
+          </div>
+          <div class="user-navbar__user-avatar-container">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/100px-Default_pfp.svg.png"
+              class="user-navbar__user-avatar"
+              alt="Imagen de usuario"
+            />
+          </div>
+        </div>
+
+        <input type="checkbox" class="navbar__menu-btn" id="menu-btn" />
+
+        <label for="menu-btn" class="navbar__menu-label">
+          <span class="navbar__menu-icon"></span>
+        </label>
+
+        <ul class="navbar__nav-links-container">
+          <li class="navbar__nav-item">
+            <a href="/index.html" class="navbar__nav-link">Inicio</a>
+          </li>
+
+          <li class="navbar__nav-item">
+            <a href="/pages/about-us/about-us.html" class="navbar__nav-link"
+              >Sobre Nosotros</a
+            >
+          </li>
+
+          <li class="navbar__nav-item">
+            <a href="/pages/contact/contact.html" class="navbar__nav-link"
+              >Contacto</a
+            >
+          </li>
+
+          <li class="navbar__nav-item">
+            <a href="/pages/register/register.html" class="navbar__nav-link"
+              >Registro</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- ===================== BANNER SECTION ======================== -->
+
+      <section class="section-banner">
+        <div class="section-banner__container">
+          <img
+            class="section-banner__img"
+            src="/assets/Images/imagen_fondo.jpeg"
+            alt="Imagen de Fondo"
+          />
+        </div>
+      </section>
+
+      <!-- <section class="section-bannerInfo">
+
+      </section> -->
+
+      <!-- ===================== CARDS SECTION ======================== -->
+
+      <section class="section-cards">
+        <header class="section-cards__header">
+          <h1 class="section-cards__title">Trending!</h1>
+        </header>
+
+
+        <div class="cards-master-container">
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-cards">
+        <header class="section-cards__header">
+          <h1 class="section-cards__title">Nuevos ingresos!</h1>
+        </header>
+
+        <div class="cards-master-container">
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="cards-container">
+            <article class="card">
+              <div class="card__header">
+                <div class="card__productCategory">Abrigos</div>
+                <div class="card__title">Product Name</div>
+              </div>
+              <div class="card__body">
+                <img
+                  src="/assets/Images/producto_1.jpg"
+                  alt="Imagen del producto"
+                  class="card__img"
+                />
+                <div class="card__footer">
+                  <div class="card__price">$15000</div>
+                  <div class="card__btn-container">
+                    <a href="#" class="card__btn">Comprar</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+
+      <!-- ========================== FOOTER =========================== -->
+
+    <footer class="footer">
+      <div class="social-media">
+        <ul class="social-media__container">
+          <li class="social-media__link-container">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="social-media__link"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+
+          <li class="social-media__link-container">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              class="social-media__link"
+            >
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+
+          <li class="social-media__link-container">
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              class="social-media__link"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+
+          <li class="social-media__link-container">
+            <a
+              href="https://web.whatsapp.com"
+              target="_blank"
+              class="social-media__link"
+              ><i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p class="copyright-text">&copy 2023 Black Cactus Todos los derechos reservados   </p>
+      </div>
+    </footer>
+  </body>
 </html>

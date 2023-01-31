@@ -1,0 +1,41 @@
+.card {
+  margin: 1rem;
+  box-shadow: 0 0 10px grey;
+  max-width: 300px;
+
+  &__header {
+    padding: 1rem;
+    background-color: $color-secondary;
+  }
+  &__productCategory {
+    font-size: 1.2rem;
+    color: rgb(141, 190, 156);
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    color: white;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__price {
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    // padding: 0.1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    padding: 1rem ;
+    background-color: $color-secondary;
+    color: white;
+  }
+}
