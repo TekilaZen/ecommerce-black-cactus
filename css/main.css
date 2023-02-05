@@ -37,7 +37,7 @@ ol, ul, li {
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   background-color: #7b8f84;
 }
@@ -211,7 +211,7 @@ ol, ul, li {
   background-color: rgb(34, 34, 34);
   color: white;
   box-shadow: 0px 0px 0.8rem black;
-  padding: 1.8rem;
+  padding: 1.5rem;
 }
 
 .form-container,
@@ -375,10 +375,11 @@ ol, ul, li {
 }
 
 .section-form {
+  width: 100vw;
   background-color: rgb(48, 98, 139);
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 2rem;
 }
 .section-form__title {
   font-size: larger;
@@ -393,6 +394,7 @@ ol, ul, li {
 }
 
 .main-contact {
+  width: 100vw;
   display: grid;
   background-color: rgb(48, 98, 139);
   grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
@@ -400,10 +402,13 @@ ol, ul, li {
 }
 
 .section-location {
+  width: 100vw;
   padding: 0 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 1.5rem;
+  overflow: hidden;
 }
 .section-location__title {
   font-size: larger;
@@ -417,14 +422,23 @@ ol, ul, li {
   display: inline-block;
 }
 .section-location__map {
-  text-align: center;
-  width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.section-location #map {
+  width: 90vw;
 }
 
-#map {
-  display: inline-block;
+@media screen and (min-width: 600px) {
+  .section-location #map {
+    width: 100%;
+  }
+  .section-form, .section-location {
+    width: 100%;
+  }
 }
-
 .section-construction {
   background-color: #406651;
   min-height: calc(100vh - 91px - 70px);
