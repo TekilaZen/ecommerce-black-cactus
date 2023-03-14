@@ -78,7 +78,7 @@
 
         <form class="form">
           <div class="form-container">
-            <label class="form-container__label" id="email-label" for="name"
+            <label class="form-container__label" id="name-label" for="name"
               >Nombre</label
             >
             <input
@@ -105,6 +105,8 @@
               required
               placeholder="example@email.com"
               pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"
+              minlength="5"
+              maxlength="70"
             />
           </div>
 
@@ -137,6 +139,7 @@
               class="form-container__input"
               type="password"
               id="rpassword"
+              name="rpassword"
               required
               class="form-container__control"
               minlength="6"
@@ -167,6 +170,7 @@
               type="date"
               name="date"
               id="date"
+              min="1920-01-01"
             />
           </div>
 

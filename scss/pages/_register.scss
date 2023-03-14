@@ -1,8 +1,10 @@
 .section-form {
+  width: 100%;
   background-color: $color-secondary;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 
   &__title {
     font-size: larger;

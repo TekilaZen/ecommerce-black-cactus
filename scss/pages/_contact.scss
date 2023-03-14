@@ -1,9 +1,9 @@
+
 .form-contact {
-  width: 60%;
+  width: 90%;
 }
 
 .section-form {
-  width: 100vw;
   background-color: $color-secondary;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,6 @@
 }
 
 .main-contact {
-  width: 100vw;
   display: grid;
   background-color: $color-secondary;
   grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
@@ -31,13 +30,12 @@
 }
 
 .section-location {
-  width: 100vw;
-  padding: 0 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 1.5rem;
-  overflow: hidden;
+  // position: relative;
+  // justify-content: center;
+
 
   &__title {
     font-size: larger;
@@ -52,21 +50,13 @@
   }
 
   &__map {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-  }
-  #map {
-    width: 90vw;
+
+    width: 90%;
+
   }
 }
 
-@media screen and (min-width: 600px) {
-  .section-location {
-  #map {
-    width: 100%;
-  }}
-.section-form , .section-location {width: 100%;}
-
-}
+#map {
+      width: 100%;
+      min-width: none;
+    }
