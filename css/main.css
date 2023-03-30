@@ -412,6 +412,10 @@ ol, ul, li {
   min-height: calc(100vh - 91px - 70px);
 }
 
+.hidden {
+  display: none;
+}
+
 .form-contact {
   width: 90%;
 }
