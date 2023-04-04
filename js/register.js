@@ -110,10 +110,11 @@ registerForm.addEventListener("submit", (event) => {
   // f- Limpiamos el formulario, o podemos llevar al USIJariO a la pagina de login
     // registerForm.reset()
 
-    
-    setTimeout(() => {
 
-        alertDialog.classList.add('hidden')}, 3000)
+    
+//     setTimeout(() => {
+
+//         alertDialog.classList.add('hidden')}, 3000)
    
 });
 
@@ -127,25 +128,86 @@ function checkIfUserExist( usuario , emailToSearch) {
     })  
 
     if (userExist) {
-        console.warn(`el usuario ya existe`)
+      console.warn(`el usuario ya existe`)
+
         return
     }
 }
 
+showAlert('Solo Textito','warning')
 
-function showAlert() {
+function showAlert(text, type = 'success') {
     // * HACEMOS EL ALERT CUSTOM
     //crea un html node
     const alertDialog = document.createElement('div');
 
     //agrega una clase
     alertDialog.classList.add('alert-dialog')
-    alertDialog.innerHTML = 'Se agrego el usuario correctamente!'
-    alertDialog.style.backgroundColor = 'red'
+    // alertDialog.innerHTML = 'Se agrego el usuario correctamente!'
+    alertDialog.innerHTML = text
 
 
-    document.querySelector('body').appendChild(alertDialog)  //agrego el alert dialog al body
+  document.querySelector('body').appendChild(alertDialog)  //agrego el alert dialog al body
+  
+  if (type === 'error') {
+    alertDialog.style.backgroundColor = 'red';
+
+  }
+  if (type === 'warning') {
+    alertDialog.style.backgroundColor = 'orange';
+
+  }
+  
+  // para demorar la aparicion luego de crearlo con document create element
+  
+  setTimeout(() => alertDialog.classList.add('show'), 10)
+
+    setTimeout(() => {
+        alertDialog.classList.remove('show');
+
+        setTimeout(() => {
+            alertDialog.remove();
+        }, 1000)
+        // window.location.href = '/pages/login/login.html'     
+    }, 3000);
 
 
+}
+
+// siempre los parametros respetan el orden.
+
+// function namedParameters(color, size, weight) {
+  
+//   const divTexto = document.createElement('p')
+
+//   divTexto.innerText = 'Un textito a modificar'
+
+//   // divTexto.style.color = color ? color : 'blue';
+//   divTexto.style.color = color || 'blue'; // la alternativa mas piola de lo de arriba 
+
+//   divTexto.style.fontSize = size || '1rem'
+
+//   divTexto.style.weight = weight ? weight : 500
+
+//   document.body.appendChild(divTexto)
+
+// }
+
+// ============================== parametros nombrado para que sea mas piola todo
+
+function namedParameters({color, size, weight},otro) {
+  
+  const divTexto = document.createElement('p')
+
+  divTexto.innerText = 'Un textito a modificar'
+
+  // divTexto.style.color = color ? color : 'blue';
+  divTexto.style.color = color || 'blue'; // la alternativa mas piola de lo de arriba 
+
+  divTexto.style.fontSize = size || '1rem'
+
+  divTexto.style.weight = weight ? weight : 500
+
+  document.body.appendChild(divTexto)
 
 }

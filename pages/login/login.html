@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+          <a class="navbar__nav-link" href="/index.html"
+            ><img
+              class="navbar__logo"
+              src="/assets/Images/Logo.png"
+              alt="Logo de la empresa"
+          /></a>
+  
+          <div class="user-navbar">
+            <div class="user-navbar__cart-icon-container">
+              <i class="fa-solid fa-cart-shopping user-navbar__cart-icon"></i>
+            </div>
+            <div class="user-navbar__user-avatar-container">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/100px-Default_pfp.svg.png"
+                class="user-navbar__user-avatar"
+                alt="Imagen de usuario"
+              />
+            </div>
+          </div>
+  
+          <input type="checkbox" class="navbar__menu-btn" id="menu-btn" />
+  
+          <label for="menu-btn" class="navbar__menu-label">
+            <span class="navbar__menu-icon"></span>
+          </label>
+  
+          <ul class="navbar__nav-links-container">
+            <li class="navbar__nav-item">
+              <a href="/index.html" class="navbar__nav-link">Inicio</a>
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/about-us/about-us.html" class="navbar__nav-link"
+                >Sobre Nosotros</a
+              >
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/contact/contact.html" class="navbar__nav-link"
+                >Contacto</a
+              >
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/register/register.html" class="navbar__nav-link"
+                >Registro</a
+              >
+            </li>
+            <li class="navbar__nav-item" id="sign-in">
+              <a href="/pages/login/login.html" class="navbar__nav-link"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    
+      <main class="main">
+        <form class="form login-form" id="loginForm">
+  
+            <div class="form-container">
+              <label class="form-container__label" id="email-label" for="email"
+                >Email</label
+              >
+              <input
+                class="form-container__input"
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@email.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"
+                minlength="5"
+                maxlength="70"
+                value="terleckideringivan@gmail.com"
+              />
+            </div>
+  
+            <div class="form-container">
+              <label
+                class="form-container__label"
+                id="password-label"
+                for="password"
+                >Contraseña</label
+              >
+              <input
+                class="form-container__input"
+                type="password"
+                id="password"
+                name="password"
+                required
+                minlength="6"
+                maxlength="12"
+                value="123456"
+              />
+            </div>
+  
+            <div class="btn-container">
+              <button type="submit" class="btn-container__control" id="submit">
+                Enviar
+              </button>
+            </div>
+            
+          </form>
+      </main>
+
+      <footer class="footer">
+        <div class="social-media">
+          <ul class="social-media__container">
+            <li class="social-media__link-container">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="social-media__link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+  
+            <li class="social-media__link-container">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="social-media__link"
+              >
+                <i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+  
+            <li class="social-media__link-container">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                class="social-media__link"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+  
+            <li class="social-media__link-container">
+              <a
+                href="https://web.whatsapp.com"
+                target="_blank"
+                class="social-media__link"
+                ><i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p class="copyright-text">&copy 2023 Black Cactus Todos los derechos reservados   </p>
+        </div>
+      </footer>
+  
+  
+  
+  
+      <script src="/js/login.js"></script>
+      <script src="/js/header.js"></script>
+      <script src="/js/alert.js"></script>
+    </body>
+</html>
