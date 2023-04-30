@@ -25,11 +25,6 @@ registerForm.addEventListener("submit", (event) => {
     console.warn("password no coincide");
     return;
   }
-  // c- Verificar si hay en el locatStorage algun usuario guardado ya con ese email
-    
-  //i - obtener los usuarios guardados
-    
-    // const user = JSON.parse(localStorage.getItem('users')) || []; //si es null le agrego un array vacio, uqe el mismo ya posee el metodo para recorrerlos.
     
      const user = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -38,70 +33,19 @@ registerForm.addEventListener("submit", (event) => {
     if (userExist1) {
         return;
     }
-
-
-
-    // ====================================== lo hago funcion =================================================
-    
-    
-    // let userEmailExist = false; //creo una variable
-
-  //ii - recorrer el array con un forEach o find o filter  || el forEach recorre todo por mas que encuentre el item
-  
-//     // !========================== OPCION 1 FOREACH NO INDICADA ==========================
-
-//     //// users.forEach(usr => {
-//     ////     if (usr.email === el.email.value) { //verificar si los emails son iguales
-//     ////         userEmailExist = true; 
-//     ////     } 
-//     //// })
-
-//     //// if (userEmailExist) {
-//     ////     console.warn(`el usuario ya existe`)
-//     ////     return 
-//     //// }
-//  // *========================== OPCION 2 FIND ==========================
-//     //cuando find encuentra un true, lo guarda en el userExist. cuando retorna el true, agarra el usuario que estaba iterando, el usuario completo y lo guarda.
-    
-//     const userExist = users.find(user => {
-//         if (user.email === el.email.value) {
-//             return true;
-//         }
-//         //return false //* puede no colocarse ya que si no coloca, returna undefined que se considera false value.
-//     })  
-
-//     if (userExist) {
-//         console.warn(`el usuario ya existe`)
-//         return
-//     }
-
-//  // *========================== OPCION 3 findIndex ==========================
-    
-//     const indexoOfUser = user.findIndex(usuario => {
-//         if (usuario.email === el.email.value) {
-//             return true
-//         }
-
-//         //si el index of user es 0, el resultado del if es false por lo qe no se ejecutaria el codigo. si el primero elemento del array es 0, puede pasar!  por eso uso >=0 o si es === -1 YA QUE SI FIND INDEX NO ENCUENTRA NADA, EL VALOR ES -1
-
-//         if (indexOfUser === -1) {
-//             console.warn(`el usuario ya existe findIndex`)
-//             return
-//         }
-//     });
-
-//     // 3 versiones
-//     // existe: retorno y muestro un alert
-//     // no existe: sigo con mi sintaxis normalmente
-//   //iii -
     
   const User = {
     name: el.name.value,
     age: el.age.value,
     password: el.password.value,
       email: el.email.value,
-      gender: el.gender.value,
+    gender: el.gender.value,
+    role: 'USER-ROLE'
   };
+  
+  // POR DEFECTO HACER QE EL USER ROLE SEA POR DEFECTO.
+  // EL ADMIN ROLE LE DOY POR MONGO O ALGO ASI.
+  // ADMIN SOLO LO PUEDE DAR EL SUPERADMIN - 
 
     // insertar en el array de usuarios el nuevo user
     user.push(User)

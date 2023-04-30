@@ -19,7 +19,7 @@
   <body>
 
     <header class="header">
-      <nav class="navbar">
+      <nav class="navbar" >
         <a class="navbar__nav-link" href="/index.html"
           ><img
             class="navbar__logo"
@@ -46,7 +46,7 @@
           <span class="navbar__menu-icon"></span>
         </label>
 
-        <ul class="navbar__nav-links-container">
+        <ul class="navbar__nav-links-container" id="navbar-list">
           <li class="navbar__nav-item">
             <a href="/index.html" class="navbar__nav-link">Inicio</a>
           </li>
@@ -66,6 +66,11 @@
           <li class="navbar__nav-item">
             <a href="/pages/register/register.html" class="navbar__nav-link"
               >Registro</a
+            >
+          </li>
+          <li class="navbar__nav-item" id="sign-in">
+            <a href="/pages/login/login.html" class="navbar__nav-link"
+              >Login</a
             >
           </li>
         </ul>
@@ -543,5 +548,6 @@
 
     <script src="/js/register.js"></script>
     <script src="/js/alert.js"></script>
+    <script src="/js/header.js"></script>
   </body>
 </html>

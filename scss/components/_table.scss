@@ -1,0 +1,50 @@
+.table {
+  border: none;
+  width: 90%;
+
+  &__header-title1 {
+    padding: 0.5rem;
+    width: 45%;
+  }
+  &__header-title2 {
+    padding: 0.5rem;
+    width: 45%;
+  }
+  &__header-title3 {
+    padding: 0.5rem;
+  }
+
+  &__body {
+    padding: 0.5rem;
+    text-align: center;
+    
+    .product {
+
+      &__name , &__description , &__price , &__action {
+        vertical-align: middle;
+      }
+
+      &__img {
+        background-color: white;
+      }
+
+      .img_product {
+        width: 70px;
+      object-fit: cover;
+      height: 70px;
+      display: block;
+      margin: 0 auto;
+      }
+    }
+
+    .product:nth-child(even) {
+      background-color: grey;
+      color: white;
+    }
+  }
+
+  &__header {
+    background-color: $color-secondary;
+    color: white;
+  }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Black Cactus</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+        <!-- LOAD FONT-AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- LOAD SWEET ALERT -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+  <body>
+    <!-- ========================== HEADER =========================== -->
+
+    <header class="header">
+        <nav class="navbar" >
+          <a class="navbar__nav-link" href="/index.html"
+            ><img
+              class="navbar__logo"
+              src="/assets/Images/Logo.png"
+              alt="Logo de la empresa"
+          /></a>
+  
+          <div class="user-navbar">
+            <div class="user-navbar__cart-icon-container">
+              <i class="fa-solid fa-cart-shopping user-navbar__cart-icon"></i>
+            </div>
+            <div class="user-navbar__user-avatar-container">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/100px-Default_pfp.svg.png"
+                class="user-navbar__user-avatar"
+                alt="Imagen de usuario"
+              />
+            </div>
+          </div>
+  
+          <input type="checkbox" class="navbar__menu-btn" id="menu-btn" />
+  
+          <label for="menu-btn" class="navbar__menu-label">
+            <span class="navbar__menu-icon"></span>
+          </label>
+  
+          <ul class="navbar__nav-links-container" id="navbar-list">
+            <li class="navbar__nav-item">
+              <a href="/index.html" class="navbar__nav-link">Inicio</a>
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/about-us/about-us.html" class="navbar__nav-link"
+                >Sobre Nosotros</a
+              >
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/contact/contact.html" class="navbar__nav-link"
+                >Contacto</a
+              >
+            </li>
+  
+            <li class="navbar__nav-item">
+              <a href="/pages/register/register.html" class="navbar__nav-link"
+                >Registro</a
+              >
+            </li>
+            <li class="navbar__nav-item" id="sign-in">
+              <a href="/pages/login/login.html" class="navbar__nav-link"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <!-- ========================== MAIN =========================== -->
+    <main class="main">
+
+      <h1>Administrador de Productos</h1>
+
+      <div class="main-product">
+
+        
+        <!--========================  FORM ===========================-->
+
+        <section class="section-formProduct">
+
+          <form class="form-product" id="product-form" onsubmit="addProduct(event)">
+
+              <div class="form-containerProduct">
+                <label class="form-containerProduct__label" id="productName-label" for="productName"
+                  >Nombre de Producto</label
+                >
+                <input
+                  class="form-containerProduct__input"
+                  type="text"
+                  id="productName"
+                  name="productName"
+                  required
+                  placeholder="Name Of the Product"
+                  minlength="4"
+                  maxlength="70"
+                />
+              </div>
+
+              <div class="form-containerProduct">
+                <label class="form-containerProduct__label" id="productDescription-label" for="productDescription"
+                  >Descripción</label
+                >
+                <input
+                  class="form-containerProduct__input"
+                  type="text"
+                  id="productDescription"
+                  name="productDescription"
+                  required
+                  placeholder="Descripción del producto"
+                  minlength="4"
+                  maxlength="70"
+                />
+              </div>
+
+              <div class="form-containerProduct">
+                <label class="form-containerProduct__label" id="productPrice-label" for="productPrice"
+                  >Precio</label
+                >
+                <input
+                  class="form-containerProduct__input"
+                  type="number"
+                  id="productPrice"
+                  name="productPrice"
+                  required
+                  placeholder="123456"
+                  minlength="1"
+                  maxlength="40"
+                />
+              </div>
+
+              <div class="form-containerProduct">
+                <label class="form-containerProduct__label" id="productImg-label" for="productImg"
+                  >Imagen</label
+                >
+                <input
+                  class="form-containerProduct__input"
+                  type="url"
+                  id="productImg"
+                  name="productImg"
+                  required
+                  value="https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
+                />
+              </div>
+
+
+
+              <div class="btn-containerProduct">
+
+                <button type="submit" class="btn-containerProduct__control" id="submit"> 
+                  Cargar
+                </button>
+
+                <button onclick="clearTable()" class="btn-containerProduct__control">Borrar Todo
+                </button>
+              </div>
+
+          </form>
+
+        </section>
+
+        <!--========================  FILTER AND DELETE  ===========================-->
+
+        <!--============================  TABLE ====================================-->
+        <section class="section-table">
+
+            <table class="table">
+
+                <thead>
+                    <tr class="table__header">
+                      
+                      <th class=" table__header-title3">IMAGEN</th>  
+                      
+                      <th class=" table__header-title1">NOMBRE DE PRODUCTO</th>
+                        
+                        <th class=" table__header-title2">DESCRIPCION</th>
+                        
+                        <th class=" table__header-title3">PRECIO</th>
+
+                        <th class=" table__header-title4">ACCIONES</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table__body" class="table__body">
+
+                </tbody>
+
+            </table>
+        </div>
+        
+      </main>
+    <!-- ========================== FOOTER =========================== -->
+
+    <footer class="footer">
+      <div class="social-media">
+        <ul class="social-media__container">
+          <li class="social-media__link-container">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="social-media__link"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+
+          <li class="social-media__link-container">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              class="social-media__link"
+            >
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+
+          <li class="social-media__link-container">
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              class="social-media__link"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+
+          <li class="social-media__link-container">
+            <a
+              href="https://web.whatsapp.com"
+              target="_blank"
+              class="social-media__link"
+              ><i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p class="copyright-text">
+          &copy 2023 Black Cactus Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/admin-product.js"></script>
+    <script src="/js/isAdmin.js"></script>
+
+  </body>
+</html>

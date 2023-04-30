@@ -36,7 +36,9 @@
 
 </article> */}
 
-const cardContainer = document.querySelector('#cards-container')
+const user = JSON.parse(localStorage.getItem('currentUser'))
+
+const cardContainer = document.querySelector('.cards-master-container')
 
 const productsLS = JSON.parse(localStorage.getItem('products'))
 
@@ -44,19 +46,22 @@ function renderizarProductos(products) {
     
     cardContainer.innerHTML = ``
     
-    products.forEach((product,index) => {
-        const card = document.createElement('article');
-        card.classList.add('card');
-        card.innerHTML = `
+  products.forEach((product,index) => {
+
+    const card = document.createElement('div');
+    card.classList.add('cards-container');
+    card.innerHTML = `
+    <article class="card">
+        
         <div class="card__header">
           <div class="card__productCategory">Abrigos</div>
-          <div class="card__title">Product Name</div>
+          <div class="card__title">${product.productName}</div>
         </div>
         
         <div class="card__body">
         
           <div class="card__bodyContainer">
-          <a id='img' href="/pages/product-detail/product-detail.html?id=1"
+          <a id='img' href="/pages/product-detail/product-detail.html?id=${index}"
             >
             <div class="card__body">
         
@@ -65,8 +70,8 @@ function renderizarProductos(products) {
               </div>
         
               <div class="card__img"><img
-                src="${product.image}"
-                alt="${product.name}"
+                src="${product.productImg}"
+                alt="${product.productName}"
                 class="card__img"
             />
           </div>
@@ -74,15 +79,21 @@ function renderizarProductos(products) {
         </div>
         
             </div></a>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni inventore molestiae neque iste minima cum omnis itaque optio dicta quia fuga distinctio quasi aperiam rem iusto, earum repudiandae unde.</p>
+          <p class="card__description">${product.productDescription}</p>
         </div>
           <div class="card__footer">
-            <div class="card__price">${product.price}</div>
-            <div class="card__btn-container">
-              <a href="#" class="card__btn">Comprar</a>
-            </div>
-          </div>`
-        cardContainer.appendChild(card)
+            <div class="card__price">${product.productPrice}</div>
+
+
+            <button type="button" class="card__btn-container" onclick='addToOrder(${index})' ${user ? "" : "disabled"} >
+  <a href="#" class="card__btn">Comprar</a>
+</button>
+          </div>
+          </article>`
+          
+      
+    cardContainer.appendChild(card)
     })
 }
-renderizarProductos()
+
+renderizarProductos(productsLS)

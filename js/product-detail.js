@@ -7,7 +7,7 @@ console.log(params)
 // si mando mas params y quiero seprar por id se complica el tema, a futuro trae errores.
  //metodo 1 
  
-const index = params.split('id=')[1].split('&')[0]
+// const index = params.split('id=')[1].split('&')[0] // este es el metodo 1
 
     
 // `?id=1`.split('id=')  // ver en consola desp

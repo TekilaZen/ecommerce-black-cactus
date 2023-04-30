@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navbar">
+      <nav class="navbar" >
         <a class="navbar__nav-link" href="/index.html"
           ><img
             class="navbar__logo"
@@ -29,7 +29,10 @@
 
         <div class="user-navbar">
           <div class="user-navbar__cart-icon-container">
+            <a href="/pages/order/order.html">
             <i class="fa-solid fa-cart-shopping user-navbar__cart-icon"></i>
+            <div class="user-navbar__cart-badge" id="cart-count">0</div>
+          </a>
           </div>
           <div class="user-navbar__user-avatar-container">
             <img
@@ -46,7 +49,8 @@
           <span class="navbar__menu-icon"></span>
         </label>
 
-        <ul class="navbar__nav-links-container">
+        <ul class="navbar__nav-links-container" id="navbar-list">
+         
           <li class="navbar__nav-item">
             <a href="/index.html" class="navbar__nav-link">Inicio</a>
           </li>
@@ -68,7 +72,8 @@
               >Registro</a
             >
           </li>
-          <li class="navbar__nav-item">
+
+          <li class="navbar__nav-item" id="sign-in">
             <a href="/pages/login/login.html" class="navbar__nav-link"
               >Login</a
             >
@@ -93,7 +98,6 @@
       <!-- ===================== CARDS SECTION ======================== -->
 
       <section class="section-cards">
-
 
           <header class="section-cards__header">
 
@@ -280,6 +284,7 @@
 
             </article>
           </div>
+
           <div class="cards-container">
             <article class="card">
               <div class="card__header">
@@ -319,6 +324,7 @@
 
             </article>
           </div>
+
           <div class="cards-container">
             <article class="card">
               <div class="card__header">
@@ -358,11 +364,10 @@
 
             </article>
           </div>
-
-
 
         </div>
       </section>
+     
       <section class="section-cards">
         <header class="section-cards__header">
           <h1 class="section-cards__title">Nuevos ingresos!</h1>
@@ -658,5 +663,8 @@
       </div>
     </footer>
     
+    <script src="/js/header.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/order.js"></script>
   </body>
 </html>
